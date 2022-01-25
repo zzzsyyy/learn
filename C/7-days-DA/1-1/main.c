@@ -52,7 +52,7 @@ void Q3() {
   br(), printf("\n");
 }
 
-int main() {
+int main(void) {
   printf("======Q1======\n");
   Q1();
   printf("\n======Q2======\n");
