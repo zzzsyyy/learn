@@ -23,6 +23,7 @@ int pgcd_1(int a, int b) {
     return pgcd_1(a - a / b * b, b);
 }
 
+//using recursion
 int pgcd_2(int a, int b) {
   while (0 != a && 0 != b) {
     arrg(&a, &b);
