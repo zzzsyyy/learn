@@ -6,32 +6,10 @@
 #define MIN 1
 #define MAX 1000
 
-void arr_sort_1(int len, int arr[]) {
-  for (int i = 0; i < len - 1; i++) {
-    int min = i;
-    for (int j = i + 1; j < len; j++) {
-      min = arr[min] > arr[j] ? j : min;
-    }
-    if (min != i) {
-      int tmp = arr[i];
-      arr[i] = arr[min];
-      arr[min] = tmp;
-    }
-  }
-}
-
-//using recursion
-void arr_sort_2(int len, int arr[]) {
-  if (len != 1) {
-    for (int i=0;i<len;i++){
-      if (arr[i]<arr[0]){
-        int tmp = arr[0];
-        arr[0]=arr[i];
-        arr[i] = tmp;
-      }
-    }
-  arr_sort_2(len-1, &arr[1]);
-  }
+void swap(int *a, int *b){
+  int tmp = *a;
+  *a=*b;
+  *b=tmp;
 }
 
 void arr_print(int len, int arr[]) {
@@ -39,6 +17,32 @@ void arr_print(int len, int arr[]) {
     printf("%d ", arr[i]);
   }
   printf("\n");
+}
+
+void arr_sort_1(int len, int arr[]) {
+  for (int i = 0; i < len - 1; i++) {
+    int min = i;
+    for (int j = i + 1; j < len; j++) {
+      min = arr[min] > arr[j] ? j : min;
+    }
+    if (min != i) {
+      swap(&arr[i],&arr[min]);
+    }
+  }
+}
+
+// using recursion
+void arr_sort_2(int len, int arr[]) {
+  if (len != 1) {
+    int min=0;
+    for (int i = 0; i < len; i++) {
+      min = arr[i] < arr[min] ? i : min;
+    }
+    if (0!=min) {
+      swap(&arr[0],&arr[min]);
+    }
+    arr_sort_2(len - 1, &arr[1]);
+  }
 }
 
 void arr_init(int len, int arr[], int min, int max) {
