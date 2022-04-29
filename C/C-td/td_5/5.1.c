@@ -15,7 +15,8 @@ int ststr(char *s1, char *s2) {
       printf("%ld ", cur - s1 + 1);
       cur++;
     } else {
-      cur +=p1-cur+1;
+      // cur +=p1-cur+1;
+      cur++;
     }
   }
   return count;
