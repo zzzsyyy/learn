@@ -13,7 +13,7 @@ int ststr(char *s1, char *s2) {
     if (*p2 == '\0') {
       count++;
       printf("%ld ", cur - s1 + 1);
-      cur = p1;
+      cur++;
     } else {
       cur +=p1-cur+1;
     }
