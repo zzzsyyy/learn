@@ -1,13 +1,5 @@
 #include <stdio.h>
 
-int is_in(char *a, char *b) {
-  while ('\0' != *a) {
-    while (*a && *b && *a++ == *b++) {
-    }
-  }
-  return 1;
-}
-
 int ststr(char *s1, char *s2) {
   int count = 0;
   char *cur = s1;
@@ -29,7 +21,7 @@ int ststr(char *s1, char *s2) {
   return count;
 }
 
-int main(int argc, char **argv) {
+int main(int argc, char *argv[]) {
   if (argc < 3) {
     printf("Please enter two strings!\n");
     return 0;
