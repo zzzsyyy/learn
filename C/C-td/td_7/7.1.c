@@ -121,7 +121,7 @@ void trans(char *exp, char postexp[]) {
     default:
       while ((*exp >= '0' && *exp <= '9') || *exp == '.') {
         postexp[i++] = *exp;
-        postexp[i++] = ' ';
+        // postexp[i++] = ' ';
         exp++;
       }
       postexp[i++] = ' ';
