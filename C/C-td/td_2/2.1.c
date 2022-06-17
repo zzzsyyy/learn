@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 int main(void) {
   float val1, val2;
   char deg1, deg2;
