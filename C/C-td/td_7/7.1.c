@@ -137,7 +137,7 @@ void trans(char *exp, char postexp[]) {
 int main() {
   char arr[100];
   printf("请输入表达式：");
-  scanf("%s",arr);
+  scanf("%s", arr);
   char arr2[100];
   trans(arr, arr2);
   printf("%s\n", arr2);

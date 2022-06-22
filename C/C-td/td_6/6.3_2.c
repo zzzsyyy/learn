@@ -80,13 +80,13 @@ void clear_buf(void) {
     ;
 }
 
-void info(STACK *s){
-    printf("容量%d栈顶%d\n",s->capacity,s->top);
-    clear_buf();
-    for (int i=0;i<=s->top;i++){
-        printf("%d ",s->array[i]);
-    }
-    printf("\n");
+void info(STACK *s) {
+  printf("容量%d栈顶%d\n", s->capacity, s->top);
+  clear_buf();
+  for (int i = 0; i <= s->top; i++) {
+    printf("%d ", s->array[i]);
+  }
+  printf("\n");
 }
 
 int main() {
@@ -100,10 +100,10 @@ int main() {
     case 'n':
       printf("请输入栈的大小：");
       scanf("%d", &maxSize);
-      STACK *s=creatStack(maxSize);
+      STACK *s = creatStack(maxSize);
       break;
     case 'i':
-      scanf("%d",&e);
+      scanf("%d", &e);
       pushStack(e, s);
       break;
     case 'p':

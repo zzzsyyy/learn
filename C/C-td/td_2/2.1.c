@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 int main(void) {
   float val1, val2;
   char deg1, deg2;
@@ -19,4 +18,3 @@ int main(void) {
   }
   printf("%.2f%c = %.2f%c\n", val1, deg1, val2, deg2);
 }
-

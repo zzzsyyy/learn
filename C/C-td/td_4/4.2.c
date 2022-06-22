@@ -6,10 +6,10 @@
 #define MIN 1
 #define MAX 1000
 
-void swap(int *a, int *b){
+void swap(int *a, int *b) {
   int tmp = *a;
-  *a=*b;
-  *b=tmp;
+  *a = *b;
+  *b = tmp;
 }
 
 void arr_print(int len, int arr[]) {
@@ -26,7 +26,7 @@ void arr_sort_1(int len, int arr[]) {
       min = arr[min] > arr[j] ? j : min;
     }
     if (min != i) {
-      swap(&arr[i],&arr[min]);
+      swap(&arr[i], &arr[min]);
     }
   }
 }
@@ -34,12 +34,12 @@ void arr_sort_1(int len, int arr[]) {
 // using recursion
 void arr_sort_2(int len, int arr[]) {
   if (len != 1) {
-    int min=0;
+    int min = 0;
     for (int i = 0; i < len; i++) {
       min = arr[i] < arr[min] ? i : min;
     }
-    if (0!=min) {
-      swap(&arr[0],&arr[min]);
+    if (0 != min) {
+      swap(&arr[0], &arr[min]);
     }
     arr_sort_2(len - 1, &arr[1]);
   }

@@ -20,10 +20,10 @@ int pgcd_1(int a, int b) {
   if (0 == b)
     return a;
   else
-    return pgcd_1(a%b, b);
+    return pgcd_1(a % b, b);
 }
 
-//using recursion
+// using recursion
 int pgcd_2(int a, int b) {
   while (0 != a && 0 != b) {
     arrg(&a, &b);

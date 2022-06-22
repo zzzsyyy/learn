@@ -28,19 +28,20 @@ float get_rand_num_by_MB() {
 int main() {
   int n = 1000, max = 0, m = 1;
   double arr[] = {2.0,  1.8,  1.6,  1.4,  1.2,  1.0,  0.8,
-                    0.6,  0.4,  0.2,  0.0,  -0.2, -0.4, -0.6,
-                    -0.8, -1.0, -1.2, -1.4, -1.6, -1.8, -2.0};
+                  0.6,  0.4,  0.2,  0.0,  -0.2, -0.4, -0.6,
+                  -0.8, -1.0, -1.2, -1.4, -1.6, -1.8, -2.0};
   srand((unsigned)time(NULL)); //随机数初始化
-  int l = sizeof(arr)/sizeof(arr[0]);
-  int times[l+1];
-  for (int i=0;i<l+1;i++)times[i]=0;
+  int l = sizeof(arr) / sizeof(arr[0]);
+  int times[l + 1];
+  for (int i = 0; i < l + 1; i++)
+    times[i] = 0;
   for (int i = 0; i < n; i++) {
     double a = get_rand_num_by_MB();
     for (int j = 0; j < l; j++) {
       if (a > arr[j]) {
         times[l - j]++;
         break;
-      } else if (a <= arr[l-1]) {
+      } else if (a <= arr[l - 1]) {
         times[0]++;
         break;
       }
