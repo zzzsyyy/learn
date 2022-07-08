@@ -37,6 +37,7 @@ int run() {
         }
         arr[num] = 1;
         len++;
+        // num=rand()%100;
       }
       len_max = (len_max > len) ? len_max : len;
     }
